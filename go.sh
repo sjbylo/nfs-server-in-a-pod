@@ -7,7 +7,7 @@
 #  oc adm policy add-scc-to-user privileged -z default
 
 
-# This "nfs-server-sts.yaml" is set up for gp2 sc
+# This "nfs-server-sts.yaml" is set up for gp3-csi sc
 # First, ensure that "nfs-server-sts.yaml" can provision PVC/PV or
 # set up a PV and matching PVC and adjust the "volumeClaimTemplates" in the yaml
 

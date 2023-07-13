@@ -66,5 +66,6 @@ oc rsh nfs-client-pod-1 ls -l /nfs/
 
 ```
 oc delete po nfs-client-pod-1 & oc delete pvc nfs-client-pvc & oc delete pv nfs-client-pv
+oc delete project nfs-client-test nfs
 ```
 

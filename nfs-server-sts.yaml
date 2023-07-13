@@ -36,7 +36,7 @@ spec:
   - metadata:
       name: nfs-export
       annotations:
-        volume.beta.kubernetes.io/storage-class: gp2
+        volume.beta.kubernetes.io/storage-class: gp3-csi
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:

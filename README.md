@@ -4,7 +4,13 @@ Based on:
 
 https://cormachogan.com/2019/06/20/kubernetes-storage-on-vsphere-101-readwritemany-nfs/
 
-If you want you can run the go.sh script to get this running.
+If you're in a hurry, run:
+
+```
+./go.sh
+```
+
+## Steps
 
 Use this for the NFS server pod:
   oc adm policy add-scc-to-user privileged -z default

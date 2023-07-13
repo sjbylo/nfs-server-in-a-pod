@@ -56,13 +56,13 @@ oc create -f nfs-client-pv.yaml
 oc create -f nfs-client-pvc.yaml
 ```
 
-# Verify
+## Verify
 
 ```
 oc rsh nfs-client-pod-1 ls -l /nfs/ 
 ```
 
-# Clean up
+## Clean up
 
 ```
 oc delete po nfs-client-pod-1 & oc delete pvc nfs-client-pvc & oc delete pv nfs-client-pv

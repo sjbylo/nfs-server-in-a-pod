@@ -1,4 +1,5 @@
-#!/bin/bash -ex
+#!/bin/bash -e
+# Run simple NFS pod.  First created in ~2018.  Verified working in July 2023.
 #See:
 #  https://cormachogan.com/2019/06/20/kubernetes-storage-on-vsphere-101-readwritemany-nfs/
 

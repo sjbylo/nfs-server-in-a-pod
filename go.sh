@@ -54,7 +54,7 @@ echo Waiting for test pod to come up ...
 until oc get pod nfs-client-pod-1 --template '{{.status.phase}}' | grep Running; do sleep 1; done
 
 echo Verifying NFS mount ...
-untilPodCmdSuccess nfs-client-pod-1 "ls -l /nfs/index.html" && echo Success && exit 1
+untilPodCmdSuccess nfs-client-pod-1 "ls -l /nfs/index.html" && echo Success pod nfs-client-pod-1 has mounted from pod nfs-server-0 && exit 0
 
 echo "Could not varify NFS mount in pod nfs-client-pod-1.  Something went wrong!"
 

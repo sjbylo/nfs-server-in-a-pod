@@ -1,0 +1,18 @@
+# This is the PV which provides the RWX via NFS server (the pod)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-client-pv
+spec:
+#  storageClassName: nfs-client-sc
+  storageClassName: ""
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+#  claimRef:
+#    name: nfs-client-pvc
+#    namespace: nfs-client
+  nfs:
+    server: 172.30.30.113
+    path: "/exports"

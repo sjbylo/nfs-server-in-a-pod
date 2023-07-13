@@ -1,0 +1,14 @@
+# This is the PVC which will claim the PV RWX from the NFS server (in the pod)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-client-pvc
+spec:
+#  storageClassName: nfs-client-sc
+# "" means do not use the default SC
+  storageClassName: ""
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi

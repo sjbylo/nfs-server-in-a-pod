@@ -1,0 +1,11 @@
+# The SC for the NFS srver to grab a RWO volume to server NFS with
+# This SC is not usually needed.  As long as the NFS server can grab storage, e.g from EBS then it should work
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: nfs-sc
+provisioner: kubernetes.io/vsphere-volume
+parameters:
+    diskformat: thin
+    storagePolicyName: raid-1
+    datastore: vsanDatastore
